@@ -2,8 +2,13 @@ const router = require('express').Router();
 const sequelize = require('../config/connection');
 const { Post, User, Comment } = require('../models');
 
+// render login
 router.get('/login', (req, res) => {
   res.render('login');
+});
+// render sign in
+router.get('/signin', (req, res) => {
+  res.render('signin');
 });
 router.get('/', (req, res) => {
   Post.findAll({
