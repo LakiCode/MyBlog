@@ -1,0 +1,39 @@
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Blog</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <nav>
+      {{#if loggedIn}}
+        <a href="/dashboard">dashboard</a>
+        <button id="logout" class="btn-no-style">logout</button>
+        <a href="/">home</a>
+        <button id="home" class="btn-no-style">home</button>
+      {{else}}
+        <a href="/login">login</a>
+      {{/if}}
+    </nav>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>
+          <a href="/">My Tech Blog</a>
+        </h1>
+      </header>
+      <main>
+        {{{body}}}
+      </main>
+      <footer>
+        created by @Robert Fuke
+      </footer>
+    </div>
+    {{#if loggedIn}}
+      <script src="/javascript/logout.js"></script>
+    {{/if}}
+  </body>
+
+</html>
