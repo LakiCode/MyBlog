@@ -15,6 +15,7 @@ async function loginFormHandler(event) {
     });
     // check response status
     if (response.ok) {
+      console.log('let me in');
       document.location.replace('/dashboard/');
     } else {
       alert(response.statusText);
