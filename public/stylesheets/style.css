@@ -7,6 +7,11 @@
 .block:not(:last-child) {
   margin-bottom: 1.5rem;
 }
+.navbar {
+  height: 150px;
+  background-color: #333;
+  padding: 20;
+}
 
 body,
 html {
