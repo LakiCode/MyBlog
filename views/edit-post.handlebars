@@ -5,8 +5,10 @@
   </h2>
   <form class="edit-post-form">
     <div>
-      <input name="post-title" type="text" value="{{post.title}}" />
-      <span>({{format_url post.post_url}})</span>
+      <label for="post-title">Title:</label>
+      <input name="post-title" type="text" id="post-title "value="{{post.title}}" />
+      <label for="post-content">Content:</label>
+      <input name="post-content" type="text" id="post-content" value="{{post.content}}" />
     </div>
     <div>
       {{post.vote_count}} {{format_plural "point" post.vote_count}} by you on {{format_date post.created_at}}
