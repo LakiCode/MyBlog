@@ -3,9 +3,11 @@
     Title: {{title}}
   
   </div>
-  <div class="Content">
-    {{content}} by {{user.username}} on {{created_at}}
+  <div class="meta">
+    <p>{{post.body.body}}</p>
+    {{content}} by {{user.username}} on {{format_date created_at}}
     |
-    <a href="/post/{{id}}"> Commnents: {{comments}} </a>
+   <a href="/post/{{id}}">{{comments.length}}
+      {{format_plural "comment" comments.length}}</a>
   </div>
 </article>
