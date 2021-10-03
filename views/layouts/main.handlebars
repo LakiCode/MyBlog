@@ -7,10 +7,11 @@
     <link rel="stylesheet" href="/stylesheets/style.css" />
     <nav class = "navbar">
       {{#if loggedIn}}
+         <a href="/">home</a>
         <a href="/dashboard">dashboard</a>
         <button id="logout" class="btn-no-style">logout</button>
-        <a href="/">home</a>
-        <button id="home" class="btn-no-style">home</button>
+       
+        
       {{else}}
         <a href="/login">login</a>
         <a href="/signin">sign in</a>
